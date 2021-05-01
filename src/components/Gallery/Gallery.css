@@ -1,0 +1,13 @@
+.gallery-header{
+    color: #1650A8;
+    margin-top: 175px;
+    margin-left: 90px;
+    font-weight: 600;
+}
+.gallery-img-wrapper{
+    max-width: 500px;
+}
+.gallery-img{
+    width:100%;
+    height:100%;
+}
