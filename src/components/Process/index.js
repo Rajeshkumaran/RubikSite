@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import ProcessImg1 from '../../img/process_img1.svg';
 import Input from '../Input';
+import Steps from '../Steps';
 export default class Process extends React.Component {
   constructor(props) {
     super(props);
@@ -27,6 +28,7 @@ export default class Process extends React.Component {
     };
   }
   onInputChange = (state) => {
+    console.log('state', state);
     this.setState({
       ...state,
     });
@@ -40,9 +42,24 @@ export default class Process extends React.Component {
             <p className="process-hurry-text">
               Hurray, Send us your details and get estimation for further move
             </p>
-            <Input state={name} name="name" placeholder="Your name" />
-            <Input state={email} name="email" />
-            <Input state={mobile} name="mobile" />
+            <Input
+              state={name}
+              name="name"
+              placeholder="Your name"
+              onChange={this.onInputChange}
+            />
+            <Input
+              state={email}
+              name="email"
+              placeholder="Your email"
+              onChange={this.onInputChange}
+            />
+            <Input
+              state={mobile}
+              name="mobile"
+              placeholder="Your mobile"
+              onChange={this.onInputChange}
+            />
           </div>
           <div className="flex flex-column align-items-center get-estimates-wrapper">
             <p className="get-estimate-text">Get Estimate</p>
@@ -58,7 +75,9 @@ export default class Process extends React.Component {
             </div>
           </div>
         </div>
-        <div className="process-s2"></div>
+        <div className="process-s2">
+          <Steps />
+        </div>
       </div>
     );
   }

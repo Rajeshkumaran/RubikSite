@@ -5,18 +5,14 @@
     font-size: 22px;
     color: #0644A2;
     max-width: 300px;
+    margin-bottom: 20px;
 }
 .form-wrapper{
     flex: 1;
 }
-.process-s1 {
-    border:1px solid red
-}
-.process-s2 {
-    border:1px solid blue
-}
+
 .get-estimates-wrapper{
-    margin-right:20px;
+    margin-right: 20px;
 }
 .get-estimate-text{
     font-size: 24px;

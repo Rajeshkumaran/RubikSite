@@ -1,0 +1,20 @@
+.steps-container{
+    margin-top: 50px;
+}
+.steps-wrapper{
+    margin:20px 0;
+}
+.step-box {
+    flex: 1;
+}
+.step-content-wrapper{
+    background: #F9F9F9;
+    border: 1px solid #FFE9D8;
+    box-sizing: border-box;
+    height: 100px;
+    margin-top: 30px;
+}
+.process-step-text{
+    font-size: 16px;
+    color: #8A8787;
+}
