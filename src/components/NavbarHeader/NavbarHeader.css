@@ -1,0 +1,81 @@
+/* .navbar-brand
+{
+     margin-left:-235px !important;
+} */
+.navbar {
+    background-color: #fff;
+}
+
+.nav-link {
+    padding: 26px!important;
+    font-family: 'Poppins';
+    font-weight: 500!important;
+    color: black!important;
+}
+
+.nav-link:hover {
+    font-weight: 700!important;
+}
+
+.estimate-btn {
+    background: #FF5A31;
+    color: #ffffff;
+    padding: 10px;
+    width: 174px;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: -10px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 26px 0;
+    margin: 0 12px;
+    transition: color 0.2s, background-color 0.2s!important;
+    color: #000;
+}
+
+a:hover {
+    color: #1650A8;
+}
+
+a:focus,
+a:active {
+    color: #1650A8;
+}
+
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 60%;
+    height: 4px;
+    width: 70%;
+    background-color: #1650A8;
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: color 0.2s, -webkit-transform 0.2s ease-out;
+    transition: color 0.1s, transform 0.2s ease-out;
+    transition: color 0.1s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+a:active::before {
+    background-color: #1650A8;
+}
+
+a:hover::before,
+a:focus::before {
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.no-underline::after, .no-underline::before {
+content: none!important;
+}

@@ -1,0 +1,36 @@
+.estimate-header {
+    color: #1650A8;
+    margin-top: 30%;
+    margin-left: 90px;
+    font-weight: 500;
+    width: 60%;
+    z-index: 1;
+}
+
+.estimate-text {
+    color: #878686;
+    margin-top: 30%;
+    margin-left: 30%;
+    font-weight: 900;
+    width: 60%;
+    z-index: 1;
+}
+
+.estimation-image {
+    margin-top: 10%;
+    margin-left: 10%!important;
+}
+
+.estimate-form-row {
+    margin-left: 15%!important;
+    width: 100%;
+}
+
+.estimate-form-group {
+    width: 65%;
+    margin-top: 3%;
+}
+
+input {
+    background-color: #F8F8F8!important;
+}
