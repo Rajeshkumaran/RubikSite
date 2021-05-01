@@ -7,6 +7,7 @@ import Home from './components/Home';
 import { Services } from './components/Services/Services';
 import { Estimate } from './components/Estimate/Estimate';
 import Gallery from './components/Gallery/Gallery';
+import Process from './components/Process';
 import Footer from './components/Footer';
 
 export class App extends Component {
@@ -14,14 +15,17 @@ export class App extends Component {
     return (
       <div className="App">
         <NavbarHeader />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about-us" component={AboutUs} />
-          <Route path="/services" component={Services} />
-          <Route path="/estimate" component={Estimate} />
-          <Route path="/gallery" component={Gallery} />
-        </Switch>
-        {/* <Footer /> */}
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about-us" component={AboutUs} />
+            <Route path="/services" component={Services} />
+            <Route path="/estimate" component={Estimate} />
+            <Route path="/gallery" component={Gallery} />
+            <Route path="/process" component={Process} />
+          </Switch>
+        </div>
+        <Footer />
       </div>
     );
   }

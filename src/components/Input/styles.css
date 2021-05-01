@@ -1,0 +1,11 @@
+.base-input-wrapper-styles{
+    margin:10px 0; 
+    max-width:300px;
+}
+.base-input{
+    width:100%;
+    padding: 10px;
+    background: #F8F8F8;
+    border: 1px solid rgba(0, 0, 0, 0.19);
+    border-radius: 4px;
+}
