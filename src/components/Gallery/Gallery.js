@@ -9,7 +9,7 @@ function Gallery() {
   return (
     <div className="flex flex-column">
       <div>
-        <h2 className="services-header">Our Gallery......</h2>
+        <h2 className="gallery-header">Our Gallery......</h2>
       </div>
       <div className="flex flex-column">
         <div className="flex justify-content-center">

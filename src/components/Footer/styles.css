@@ -1,0 +1,26 @@
+.footer-wrapper{
+    background: #838383;
+    padding: 40px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer-columns-wrapper{
+    margin: 0 150px;
+}
+.footer-col-wrapper{
+    margin: 0 40px;
+}
+.footer-col-heading{
+    font-weight: bold;
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom:5px;
+}
+.footer-col-item{
+    font-weight: 500;
+    font-size: 16px;
+    color: #D6D6D6;
+    padding:0;
+    margin:3px 0;
+}
