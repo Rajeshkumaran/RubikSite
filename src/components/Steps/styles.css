@@ -56,3 +56,15 @@
     flex: 2;
     margin-left: 50px;
 }
+.qty-input{
+    background: #47CA8F !important;
+    border: none;
+    width: 60px;
+    padding: 5px;
+    margin: 0 10px;
+}
+/* Always */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    opacity: 1;
+}

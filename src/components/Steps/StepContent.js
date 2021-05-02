@@ -1,6 +1,7 @@
 import React from 'react';
 import Page1 from './Page1';
 import Page2 from './Page2';
+import Page3 from './Page3';
 import Page4 from './Page4';
 export default class StepContent extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ export default class StepContent extends React.Component {
     this.state = {
       pageNo: 1,
     };
+    this.totalPages = 4;
   }
   renderPage = () => {
     switch (this.state.pageNo) {
@@ -16,6 +18,8 @@ export default class StepContent extends React.Component {
       case 2:
         return <Page2 />;
       case 3:
+        return <Page3 />;
+      case 4:
         return <Page4 />;
       default:
         return <Page1 />;
@@ -46,12 +50,12 @@ export default class StepContent extends React.Component {
               Back
             </button>
           )}
-          {pageNo < 3 && (
+          {pageNo < this.totalPages && (
             <button className="step-control-next" onClick={this.onNext}>
               Next
             </button>
           )}
-          {pageNo === 3 && (
+          {pageNo === this.totalPages && (
             <button
               className="step-control-submit"
               onClick={() =>
