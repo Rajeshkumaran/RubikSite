@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './styles.css';
 import CirclePending from '../../img/circle_pending.png';
+import StepContent from './StepContent';
 const STEPS = {
   step1: {
     id: 'step1',
@@ -116,7 +117,7 @@ export default class Steps extends React.Component {
             />
           ))}
         </div>
-        <div className="step-content-wrapper"></div>
+        <StepContent />
       </div>
     );
   }
