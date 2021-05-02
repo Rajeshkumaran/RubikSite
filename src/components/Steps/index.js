@@ -20,16 +20,17 @@ const STEPS = {
   },
   step4: {
     id: 'step4',
-    stepName: 'Budget',
-    width: 0,
-  },
-  step5: {
-    id: 'step5',
-    stepName: 'Timeline',
+    stepName: 'Budget & Timeline',
     width: 0,
   },
 };
-const Step = ({ step, updateWidth, isSecondLastItem, isLastItem }) => {
+const Step = ({
+  step,
+  updateWidth,
+  isSecondLastItem,
+  isLastItem,
+  activeItem,
+}) => {
   useEffect(() => {
     const element = document.getElementById(`process-${step.id}`);
     if (element) {
@@ -50,7 +51,7 @@ const Step = ({ step, updateWidth, isSecondLastItem, isLastItem }) => {
             }}
           />
         )}
-        <span>
+        <span style={{ background: activeItem ? 'red' : 'none' }}>
           <img src={CirclePending} alt="circle-pending" />
         </span>
         {!isLastItem && (
@@ -68,7 +69,7 @@ const Step = ({ step, updateWidth, isSecondLastItem, isLastItem }) => {
         className="process-step-text"
         style={{
           marginTop: '20px',
-          'text-align': !isLastItem ? 'left' : 'right',
+          textAlign: !isLastItem ? 'left' : 'right',
         }}
       >
         {step.stepName}
@@ -81,6 +82,7 @@ export default class Steps extends React.Component {
     super(props);
     this.state = {
       steps: { ...STEPS },
+      activeStep: 0,
     };
   }
   updateWidth = (stepId, width) => {
@@ -94,6 +96,10 @@ export default class Steps extends React.Component {
       },
     }));
   };
+  updateStep = (stepNo) =>
+    this.setState({
+      activeStep: stepNo,
+    });
   resizeListener = () => {
     this.setState({
       isWindowChanged: !this.state.isWindowChanged,
@@ -103,21 +109,23 @@ export default class Steps extends React.Component {
     window.addEventListener('resize', this.resizeListener);
   }
   render() {
-    const { steps } = this.state;
+    const { steps, activeStep } = this.state;
     const mappedSteps = Object.keys(steps);
     return (
       <div className="steps-container">
         <div className="steps-wrapper flex">
           {mappedSteps.map((stepId, index) => (
             <Step
+              key={`step-${stepId}`}
               step={steps[stepId]}
               updateWidth={this.updateWidth}
               isSecondLastItem={mappedSteps.length - 1 === index}
               isLastItem={mappedSteps.length - 1 === index}
+              activeItem={activeStep === index}
             />
           ))}
         </div>
-        <StepContent />
+        <StepContent updateStep={this.updateStep} />
       </div>
     );
   }

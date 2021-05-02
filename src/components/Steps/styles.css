@@ -39,6 +39,13 @@
     color: #FF5A31;
     background: transparent;
 }
+.step-control-submit{
+    background: #FF5A31;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    padding: 5px 7px;
+}
 .question-wrapper{
     width: 200px;
 }

@@ -53,6 +53,9 @@ export default function Page1() {
           <RangeSlider
             start={'200 sq.ft'}
             end={'5000 sq.ft'}
+            min={200}
+            max={5000}
+            name="Sq.ft"
             selectedValue={homeSize}
             onSelectRange={(value) => setHomeSize(value)}
           />

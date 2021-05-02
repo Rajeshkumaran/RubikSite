@@ -30,10 +30,17 @@ function Footer() {
       </div>
       <div className="flex footer-columns-wrapper">
         {ColumnData.map((col) => (
-          <div className="flex flex-column footer-col-wrapper">
+          <div
+            className="flex flex-column footer-col-wrapper"
+            key={`footer-column-header-${col.heading}`}
+          >
             <p className="footer-col-heading">{col.heading}</p>
             {col.links.map((link) => (
-              <a className="footer-col-item" href="/">
+              <a
+                className="footer-col-item"
+                href="/"
+                key={`footer-column-value-${col.heading}-${link}`}
+              >
                 {link}
               </a>
             ))}

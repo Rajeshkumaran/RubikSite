@@ -6,11 +6,14 @@ export default class RangeSlider extends React.Component {
     const {
       start = '200 sq.ft',
       end = '5000 sq.ft',
+      min,
+      max,
       selectedValue,
       onSelectRange,
+      name,
     } = this.props;
     return (
-      <div className="flex">
+      <div className="flex" style={{ alignItems: 'center' }}>
         <div className="flex flex-column">
           <div className="range-info-wrapper">
             <span style={{ fontSize: '10px', color: '#A2A1A1' }}>{start}</span>
@@ -20,8 +23,8 @@ export default class RangeSlider extends React.Component {
             <Form.Control
               type="range"
               custom
-              min="200"
-              max="5000"
+              min={min}
+              max={max}
               value={selectedValue}
               onChange={(e) => onSelectRange(e.target.value)}
             />
@@ -32,7 +35,7 @@ export default class RangeSlider extends React.Component {
           style={{ marginLeft: '20px', alignItems: 'center' }}
         >
           <span className="range-selected-value">{selectedValue}</span>
-          <span style={{ fontSize: '14px', color: '#A2A1A1' }}>Sq ft</span>
+          <span style={{ fontSize: '14px', color: '#A2A1A1' }}>{name}</span>
         </div>
       </div>
     );
